@@ -2,8 +2,11 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private int[] numbers = new int[12];
+    private final int FULL = 11;
+    private final int CHECK = -1;
+    private final int SIZE = 12;
 
+    private int[] numbers = new int[SIZE];
     public int total = -1;
 
     public void countIn(int in) {
@@ -12,11 +15,11 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == CHECK;
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == FULL;
     }
 
     protected int getLastNumber() {
